@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nota sobre Firma y Migración de Registros – SaraPsicologa</title>
+  <style>
+    :root{
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --ink: #111827;
+      --muted: #6b7280;
+      --line: #e5e7eb;
+      --brand: #1e40af;   /* azul sobrio */
+      --brand2:#2563eb;   /* azul acento */
+      --ok: #065f46;
+      --warn: #92400e;
+      --shadow: 0 10px 24px rgba(17,24,39,.08);
+      --radius: 14px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.55;
+    }
+
+    .topbar{
+      background: linear-gradient(135deg, var(--brand), var(--brand2));
+      color: #fff;
+      padding: 26px 16px;
+      border-bottom: 1px solid rgba(255,255,255,.18);
+    }
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+    .title{
+      margin:0;
+      font-size: 28px;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+    }
+    .subtitle{
+      margin: 6px 0 0 0;
+      opacity: .92;
+      font-size: 14px;
+    }
+
+    .main{
+      padding: 18px 0 44px 0;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      margin-top: 16px;
+    }
+
+    .meta{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 14px;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 10px;
+    }
+    .chip{
+      border:1px solid var(--line);
+      border-radius: 999px;
+      padding: 6px 10px;
+      background: #fbfdff;
+    }
+
+    h2{
+      margin: 0 0 10px 0;
+      font-size: 18px;
+      letter-spacing: -0.01em;
+    }
+    h3{
+      margin: 16px 0 8px 0;
+      font-size: 15px;
+    }
+
+    p{ margin: 10px 0; color: #111827; }
+    .muted{ color: var(--muted); }
+    ul{ margin: 10px 0 0 22px; }
+    li{ margin: 6px 0; }
+
+    .callout{
+      border-radius: 12px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      background: #f9fafb;
+      margin-top: 12px;
+    }
+    .callout.ok{
+      border-color: rgba(6,95,70,.25);
+      background: rgba(6,95,70,.06);
+    }
+    .callout.warn{
+      border-color: rgba(146,64,14,.25);
+      background: rgba(146,64,14,.06);
+    }
+    .label{
+      font-weight: 800;
+      font-size: 12px;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      color: var(--muted);
+    }
+
+    .mono{
+      font-family: var(--mono);
+      font-size: 12.5px;
+      background: #0b1220;
+      color: #e5e7eb;
+      border-radius: 12px;
+      padding: 12px;
+      overflow:auto;
+      border:1px solid rgba(255,255,255,.06);
+      margin-top: 10px;
+    }
+
+    .divider{
+      height:1px;
+      background: var(--line);
+      margin: 16px 0;
+    }
+
+    .footer{
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+    }
+
+    a{ color: var(--brand2); text-decoration: none; }
+    a:hover{ text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap">
+      <h1 class="title">Nota sobre Firma y Migración de Registros</h1>
+      <p class="subtitle">SaraPsicologa – Registro clínico por sesión con sello de fecha y hora (timestamp)</p>
+      <div class="meta">
+        <span class="chip"><strong>Documento:</strong> Aclaración de registro y firma</span>
+        <span class="chip"><strong>Última actualización:</strong> 12 de enero de 2026</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="main">
+    <div class="wrap">
+
+      <section class="card">
+        <h2>1) Propósito del documento</h2>
+        <p>
+          Este documento tiene como objetivo <strong>aclarar el funcionamiento de la firma</strong> dentro de la
+          funcionalidad de historia clínica en el software <strong>SaraPsicologa</strong>, especialmente en escenarios
+          donde se <strong>migran registros</strong> que previamente se llevaron en formato manual (papel u otro medio).
+        </p>
+
+        <div class="callout ok">
+          <div class="label">En resumen</div>
+          <ul>
+            <li>
+              La <strong>firma</strong> se registra <strong>por cada sesión / nota</strong> y guarda un <strong>timestamp real</strong>
+              (fecha y hora exactas del momento en que se firma/guarda el registro en el sistema).
+            </li>
+            <li>
+              La <strong>fecha de la sesión</strong> (la que se asigna en el formulario) puede representar la
+              <strong>fecha real de atención</strong>, aunque el timestamp de la firma sea posterior por motivo de migración.
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>2) Cómo funciona la firma en SaraPsicologa</h2>
+
+        <h3>2.1 Firma por cada sesión o evolución</h3>
+        <p>
+          La historia clínica se compone de una <strong>sucesión de registros cronológicos</strong>. Por esta razón,
+          en SaraPsicologa se implementó el criterio de <strong>firma por cada sesión</strong> (o nota / evolución),
+          de modo que cada registro quede individualmente cerrado con evidencia de integridad.
+        </p>
+
+        <h3>2.2 Timestamp (fecha y hora) de la firma</h3>
+        <p>
+          La firma incluye un <strong>sello de tiempo</strong> (<em>timestamp</em>) que corresponde a la <strong>fecha y hora reales</strong>
+          en las que el registro fue firmado/guardado dentro del software.
+        </p>
+
+        <div class="callout warn">
+          <div class="label">Importante</div>
+          <p class="muted" style="margin:0;">
+            El <strong>timestamp de la firma</strong> es independiente de la fecha seleccionada en el formulario de la sesión.
+            En otras palabras: <strong>no importa qué fecha se elija en el datepicker</strong>, la firma siempre conserva
+            la <strong>fecha y hora reales</strong> en que se registró la información en el sistema.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <p class="muted">
+          Ejemplo conceptual (ilustrativo):
+        </p>
+        <div class="mono">
+Fecha de sesión (atención):   2024-10-03 (definida por el profesional)
+Timestamp de firma (sistema): 2026-01-12 15:34 (momento real en que se guardó/firmó en SaraPsicologa)
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>3) Aclaración por migración desde registros manuales</h2>
+        <p>
+          Antes de usar SaraPsicologa, el profesional podía llevar la historia clínica mediante un método manual.
+          Al migrar (transcribir o cargar) información histórica al software, es posible que:
+        </p>
+        <ul>
+          <li>
+            La <strong>fecha real de atención</strong> corresponda a un día pasado (por ejemplo, la fecha de la cita
+            o la fecha escrita en el registro manual).
+          </li>
+          <li>
+            La <strong>firma</strong> quede con un <strong>timestamp actual</strong> (el día y hora en que se realizó la migración),
+            por tratarse del <strong>momento real de registro en el sistema</strong>.
+          </li>
+        </ul>
+
+        <div class="callout ok">
+          <div class="label">Interpretación correcta</div>
+          <p style="margin:0;">
+            En caso de migración, la diferencia entre la <strong>fecha de sesión</strong> y el <strong>timestamp de firma</strong>
+            <strong>no indica un error</strong>: significa que el contenido corresponde a una atención previa, y fue
+            incorporado al software en una fecha posterior como parte del proceso de digitalización.
+          </p>
+        </div>
+
+        <h3>3.1 Recomendación de buenas prácticas durante migración</h3>
+        <ul>
+          <li>
+            Mantener la <strong>fecha de sesión</strong> como la <strong>fecha real de atención</strong> (según cita/registro manual).
+          </li>
+          <li>
+            En el texto/observaciones de la sesión, agregar una nota corta tipo:
+            <em>“Registro migrado desde historia clínica manual. La firma refleja la fecha de digitalización.”</em>
+          </li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>4) Alcance y limitaciones</h2>
+        <p class="muted">
+          Este documento es una aclaración funcional del sistema. No reemplaza el criterio profesional, ni constituye asesoría legal.
+          El responsable del contenido clínico es el profesional tratante, y el uso del software debe alinearse con los requisitos
+          aplicables al ejercicio y a la normativa vigente en Colombia.
+        </p>
+
+        <div class="divider"></div>
+
+        <h3>Contacto</h3>
+        <p class="muted" style="margin-bottom:0;">
+          Si necesitas solicitar corrección o eliminación de datos, o tienes preguntas sobre el manejo del registro:
+          <br />
+          <strong>Email:</strong> <a href="mailto:lejozapata@gmail.com">lejozapata@gmail.com</a>
+        </p>
+      </section>
+
+      <p class="footer">
+        © SaraPsicologa — Documento informativo sobre firma y migración de registros.
+      </p>
+
+    </div>
+  </main>
+</body>
+</html>

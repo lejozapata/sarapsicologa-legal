@@ -103,6 +103,30 @@
       .kvs{grid-template-columns:1fr}
       .title{font-size:24px}
     }
+
+    .contact {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    max-width: 800px;
+    margin: 30px auto;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+
+  .contact h3 {
+    margin-top: 0;
+    color: #1f2937;
+  }
+
+  .contact a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+
+  .contact a:hover {
+    text-decoration: underline;
+  }
   </style>
 </head>
 
@@ -201,20 +225,26 @@
       </p>
     </div>
 
-    <div class="card">
-      <h2>Contacto</h2>
-      <div class="rule"></div>
-      <div class="kvs">
-        <div>Correo de contacto</div>
-        <div><a href="mailto:lejozapata@gmail.com">lejozapata@gmail.com</a></div>
+    <div class="contact">
+  <h3>Contacto</h3>
 
-        <div>Documento relacionado</div>
-        <div>
-          Política de Privacidad: <span class="mono">/sarapsicologa-legal/privacy.html</span><br/>
-          Eliminación de Datos: <span class="mono">/sarapsicologa-legal/delete.html</span>
-        </div>
-      </div>
-    </div>
+  <p>
+    <strong>Correo de contacto:</strong>
+    <a href="mailto:lejozapataa@gmail.com">lejozapataa@gmail.com</a>
+  </p>
+
+  <p>
+    <strong>Documentos relacionados:</strong><br>
+
+    <a href="/sarapsicologa-legal/privacy.html" target="_blank">
+      Política de Privacidad
+    </a><br>
+
+    <a href="/sarapsicologa-legal/delete.html" target="_blank">
+      Eliminación de Datos
+    </a>
+  </p>
+</div>
 
     <div class="footer">
       © <span id="y"></span> SaraPsicologa — Documento informativo.

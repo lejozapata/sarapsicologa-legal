@@ -1,261 +1,243 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aclaración de Firma y Migración de Registros — SaraPsicologa</title>
-  <meta name="description" content="Documento informativo sobre firma por sesión con timestamp y migración de registros manuales a SaraPsicologa." />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Constancia sobre Firma y Migración de Registros Clínicos – SaraPsicologa</title>
+
   <style>
-    :root{
-      --accent:#f27c4a;
-      --text:#1f2937;
-      --muted:#6b7280;
-      --bg:#f6f7fb;
-      --card:#ffffff;
-      --line:#e5e7eb;
-      --shadow: 0 8px 22px rgba(17,24,39,.08);
-      --radius:16px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      color:var(--text);
-      background: linear-gradient(180deg,#ffffff 0%, var(--bg) 100%);
-    }
-    .topbar{
-      border-bottom:1px solid var(--line);
-      background:#fff;
-    }
-    .wrap{max-width:980px; margin:0 auto; padding:18px 18px;}
-    .brand{display:flex; align-items:center; gap:12px;}
-    .logo{
-      width:44px; height:44px; border-radius:12px;
-      background: radial-gradient(circle at 30% 30%, #ffd6c7 0%, #f6a889 35%, var(--accent) 100%);
-      box-shadow: 0 6px 14px rgba(242,124,74,.22);
-    }
-    .brand h1{font-size:16px; margin:0; line-height:1.1; letter-spacing:.2px;}
-    .brand small{display:block; color:var(--muted); font-weight:500; margin-top:2px;}
-
-    .title{font-size:30px; margin:18px 0 0; letter-spacing:-.4px;}
-    .subtitle{margin:8px 0 0; color:var(--muted); line-height:1.7}
-
-    .pill{
-      display:inline-flex; align-items:center; gap:8px;
-      font-size:12px; color:#7c2d12;
-      background:#fff1ea; border:1px solid #ffd6c7;
-      padding:6px 10px; border-radius:999px; margin-top:14px;
-    }
-    .dot{width:8px; height:8px; border-radius:999px; background:var(--accent)}
-
-    .card{
-      background:var(--card);
-      border:1px solid var(--line);
-      border-radius:var(--radius);
-      box-shadow:var(--shadow);
-      padding:18px;
-      margin:14px 0;
-    }
-    h2{margin:0 0 10px; font-size:18px; letter-spacing:-.2px;}
-    .rule{height:3px; width:52px; background:var(--accent); border-radius:999px; margin:10px 0 14px;}
-
-    p{margin:10px 0; line-height:1.7}
-    ul{margin:10px 0 0 18px; padding:0}
-    li{margin:8px 0; line-height:1.6}
-    .muted{color:var(--muted)}
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-
-    .callout{
-      border-left:4px solid var(--accent);
-      padding:10px 12px;
-      background:#fff7f3;
-      border-radius:12px;
-      margin-top:10px;
+    :root {
+      --primary: #ff7a18;
+      --bg: #f5f7fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --highlight-bg: #fff4ec;
+      --highlight-border: #ff7a18;
     }
 
-    .kvs{
-      display:grid; grid-template-columns: 220px 1fr;
-      gap:10px 14px;
-      margin-top:10px;
-    }
-    .kvs div:nth-child(odd){color:var(--muted)}
-
-    .footer{
-      color:var(--muted);
-      font-size:13px;
-      padding:18px 0 26px;
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Ubuntu, sans-serif;
     }
 
-    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace}
-    .badge{
-      display:inline-block;
-      font-size:12px;
-      padding:2px 8px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      color:var(--muted);
-      margin-left:8px;
-      vertical-align:middle;
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
-    @media (max-width: 820px){
-      .kvs{grid-template-columns:1fr}
-      .title{font-size:24px}
+    .container {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px;
     }
 
-    .contact {
-    background: #ffffff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-    max-width: 800px;
-    margin: 30px auto;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 8px;
+    }
 
-  .contact h3 {
-    margin-top: 0;
-    color: #1f2937;
-  }
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 30px;
+    }
 
-  .contact a {
-    color: #2563eb;
-    text-decoration: none;
-  }
+    .card {
+      background: var(--card);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+    }
 
-  .contact a:hover {
-    text-decoration: underline;
-  }
+    .card h2 {
+      margin-top: 0;
+      font-size: 1.25rem;
+    }
+
+    .rule {
+      width: 60px;
+      height: 4px;
+      background: var(--primary);
+      border-radius: 4px;
+      margin: 10px 0 20px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .highlight {
+      background: var(--highlight-bg);
+      border-left: 4px solid var(--highlight-border);
+      padding: 14px 16px;
+      border-radius: 8px;
+      margin-top: 16px;
+      font-size: 0.95rem;
+    }
+
+    .kvs {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 10px 16px;
+      font-size: 0.95rem;
+    }
+
+    .kvs div:nth-child(odd) {
+      color: var(--muted);
+    }
+
+    a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin: 40px 0 20px;
+    }
   </style>
 </head>
 
 <body>
-  <div class="topbar">
-    <div class="wrap brand">
-      <div class="logo" aria-hidden="true"></div>
-      <div>
-        <h1>SaraPsicologa</h1>
-        <small>Información legal — Firma y migración de registros</small>
-      </div>
-    </div>
-  </div>
-
-  <main class="wrap">
-    <h2 class="title">Aclaración de Firma y Migración de Registros</h2>
+  <div class="container">
+    <h1>Constancia sobre Firma y Migración de Registros Clínicos</h1>
     <p class="subtitle">
-      Este documento explica cómo se registra la firma por sesión en <b>SaraPsicologa</b> y por qué,
-      en algunos casos de migración desde registros manuales, la fecha/hora de firma puede no coincidir con
-      la fecha real de la cita.
+      Documento informativo para fines de trazabilidad, auditoría y control
     </p>
 
-    <div class="pill"><span class="dot"></span> Última actualización: <b>12 de enero de 2026</b></div>
-
+    <!-- 1 -->
     <div class="card">
-      <h2>1) Firma por cada sesión (timestamp del registro) <span class="badge">importante</span></h2>
+      <h2>1) Firma digital por cada sesión o nota clínica</h2>
       <div class="rule"></div>
 
       <p>
-        En SaraPsicologa, la firma se almacena <b>por cada sesión / nota</b> y queda asociada a un
-        <b>timestamp (fecha y hora) del momento en que se registra o guarda la sesión</b>.
+        En el sistema <strong>SaraPsicologa</strong>, cada sesión, evolución o nota
+        clínica constituye un <strong>registro individual e independiente</strong>.
+        Al momento de su cierre o guardado definitivo, el sistema asocia una firma
+        digital vinculada a un <strong>timestamp (fecha y hora)</strong> generado
+        automáticamente.
       </p>
 
       <ul>
         <li>
-          El timestamp corresponde a la <b>fecha/hora real de registro en el sistema</b>,
-          <b>independientemente</b> de la fecha seleccionada en el <span class="mono">datepicker</span> de la sesión.
+          El timestamp corresponde al <strong>momento real de registro digital</strong>
+          dentro del sistema.
         </li>
         <li>
-          Este comportamiento busca dar trazabilidad y soporte a la integridad del registro clínico,
-          manteniendo un rastro verificable de cuándo se cerró/firmó cada entrada.
+          Este valor es independiente de la fecha clínica consignada como fecha de
+          atención o cita.
+        </li>
+        <li>
+          La firma digital tiene como finalidad <strong>garantizar integridad,
+          trazabilidad y no alteración</strong> del registro una vez cerrado.
         </li>
       </ul>
 
-      <div class="callout">
-        <b>En términos prácticos:</b> si hoy se firma/guarda una sesión, el sello de tiempo reflejará “hoy”,
-        incluso si la sesión está marcada como ocurrida en una fecha anterior.
+      <div class="highlight">
+        <strong>Alcance de la firma:</strong> la firma certifica el momento en que el
+        registro fue cerrado digitalmente en el sistema, mas no modifica ni redefine
+        la fecha en que ocurrió el acto clínico.
       </div>
     </div>
 
+    <!-- 2 -->
     <div class="card">
-      <h2>2) Migración desde historia clínica manual</h2>
+      <h2>2) Migración de historias clínicas previamente registradas de forma manual</h2>
       <div class="rule"></div>
 
       <p>
-        Antes de utilizar SaraPsicologa, la profesional registraba historias clínicas de forma manual.
-        Al migrar (transcribir) esos registros al software, puede ocurrir lo siguiente:
+        Antes de la adopción del sistema SaraPsicologa, la profesional registraba la
+        información clínica de sus pacientes mediante soportes manuales o físicos.
+        Dichos registros fueron posteriormente <strong>transcritos o digitalizados</strong>
+        en el sistema.
       </p>
 
       <ul>
         <li>
-          La <b>fecha de la cita</b> (o el dato clínico) corresponde a la fecha histórica real en que
-          ocurrió la atención.
+          La <strong>fecha de la atención clínica</strong> corresponde a la fecha
+          histórica real en la que se prestó el servicio.
         </li>
         <li>
-          La <b>fecha/hora de firma</b> puede reflejar la fecha actual, debido a que el registro se está
-          ingresando/migrando al sistema en una fecha posterior.
+          La <strong>fecha y hora de la firma digital</strong> pueden corresponder a
+          una fecha posterior, asociada al proceso de ingreso o migración del registro
+          al sistema.
         </li>
       </ul>
 
-      <div class="callout">
-        <b>Aclaración clave:</b> una discrepancia entre “fecha de la cita” y “timestamp de firma”
-        <b>no implica</b> que la atención haya ocurrido en la fecha del timestamp; significa que
-        el registro fue <b>digitalizado/migrado</b> en ese momento.
+      <div class="highlight">
+        <strong>Aclaración para auditoría:</strong> una diferencia entre la fecha de
+        atención clínica y el timestamp de firma digital indica un proceso de
+        digitalización posterior de un registro preexistente, y no una alteración
+        del contenido clínico ni una modificación de la fecha real de la atención.
       </div>
     </div>
 
+    <!-- 3 -->
     <div class="card">
-      <h2>3) Alcance y finalidad de este documento</h2>
+      <h2>3) Alcance y finalidad del presente documento</h2>
       <div class="rule"></div>
 
       <ul>
         <li>
-          Este documento tiene como finalidad <b>dejar constancia</b> del criterio técnico de registro y migración.
+          Este documento tiene como finalidad <strong>dejar constancia del criterio
+          técnico</strong> utilizado para el registro, cierre y migración de la
+          historia clínica.
         </li>
         <li>
-          En caso de auditoría o revisión, la fecha de ocurrencia de la sesión debe interpretarse según
-          los campos clínicos de la sesión, mientras que el timestamp de firma refleja el momento de
-          registro/cierre digital.
+          En procesos de auditoría, inspección o revisión, la fecha relevante del acto
+          clínico debe interpretarse conforme a los campos clínicos del registro.
+        </li>
+        <li>
+          El timestamp de firma digital representa exclusivamente el momento de
+          registro o cierre digital dentro del sistema.
         </li>
       </ul>
-
-      <p class="muted">
-        Si se requiere, pueden anexarse evidencias de migración (p. ej., notas internas o registros que indiquen
-        que una sesión proviene de migración).
-      </p>
     </div>
 
-    <div class="contact">
-  <h3>Contacto</h3>
+    <!-- CONTACTO -->
+    <div class="card">
+      <h2>Contacto</h2>
+      <div class="rule"></div>
 
-  <p>
-    <strong>Correo de contacto:</strong>
-    <a href="mailto:lejozapataa@gmail.com">lejozapataa@gmail.com</a>
-  </p>
+      <div class="kvs">
+        <div>Correo de contacto</div>
+        <div>
+          <a href="mailto:lejozapataa@gmail.com">lejozapataa@gmail.com</a>
+        </div>
 
-  <p>
-    <strong>Documentos relacionados:</strong><br>
-
-    <a href="/sarapsicologa-legal/privacy.html" target="_blank">
-      Política de Privacidad
-    </a><br>
-
-    <a href="/sarapsicologa-legal/delete.html" target="_blank">
-      Eliminación de Datos
-    </a>
-  </p>
-</div>
-
-    <div class="footer">
-      © <span id="y"></span> SaraPsicologa — Documento informativo.
-      <br/>
-      Recomendación: si necesitas citar normativa específica o ajustar redacción jurídica, valida con un asesor legal.
+        <div>Documentos relacionados</div>
+        <div>
+          <a href="/sarapsicologa-legal/privacy.html" target="_blank">
+            Política de Privacidad
+          </a><br />
+          <a href="/sarapsicologa-legal/delete.html" target="_blank">
+            Eliminación de Datos
+          </a>
+        </div>
+      </div>
     </div>
-  </main>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+    <footer>
+      © 2026 SaraPsicologa — Documento informativo de carácter técnico.<br />
+      Este documento no sustituye criterio profesional ni asesoría jurídica especializada.
+    </footer>
+  </div>
 </body>
 </html>
 

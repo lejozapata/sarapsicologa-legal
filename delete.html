@@ -1,21 +1,152 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Eliminación de Datos – SaraPsicologa</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Eliminación de Datos — SaraPsicologa</title>
+  <meta name="description" content="Cómo solicitar la eliminación de datos personales en SaraPsicologa." />
+  <style>
+    :root{
+      --accent:#f27c4a;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --bg:#f6f7fb;
+      --card:#ffffff;
+      --line:#e5e7eb;
+      --shadow: 0 8px 22px rgba(17,24,39,.08);
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:var(--text);
+      background: linear-gradient(180deg,#ffffff 0%, var(--bg) 100%);
+    }
+    .topbar{
+      border-bottom:1px solid var(--line);
+      background:#fff;
+    }
+    .wrap{max-width:980px; margin:0 auto; padding:18px 18px;}
+    .brand{display:flex; align-items:center; gap:12px;}
+    .logo{
+      width:44px; height:44px; border-radius:12px;
+      background: radial-gradient(circle at 30% 30%, #ffd6c7 0%, #f6a889 35%, var(--accent) 100%);
+      box-shadow: 0 6px 14px rgba(242,124,74,.22);
+    }
+    .brand h1{font-size:16px; margin:0; line-height:1.1; letter-spacing:.2px;}
+    .brand small{display:block; color:var(--muted); font-weight:500; margin-top:2px;}
+    .title{font-size:30px; margin:18px 0 0; letter-spacing:-.4px;}
+    .subtitle{margin:8px 0 0; color:var(--muted); line-height:1.7}
+    .card{
+      background:var(--card);
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+      padding:18px;
+      margin:14px 0;
+    }
+    h2{margin:0 0 10px; font-size:18px; letter-spacing:-.2px;}
+    .rule{height:3px; width:52px; background:var(--accent); border-radius:999px; margin:10px 0 14px;}
+    ol{margin:10px 0 0 18px}
+    li{margin:10px 0; line-height:1.7}
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      font-size:12px; color:#7c2d12;
+      background:#fff1ea; border:1px solid #ffd6c7;
+      padding:6px 10px; border-radius:999px; margin-top:14px;
+    }
+    .dot{width:8px; height:8px; border-radius:999px; background:var(--accent)}
+    .kvs{
+      display:grid; grid-template-columns: 180px 1fr;
+      gap:10px 14px;
+      margin-top:10px;
+    }
+    .kvs div:nth-child(odd){color:var(--muted)}
+    .footer{
+      color:var(--muted);
+      font-size:13px;
+      padding:18px 0 26px;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    @media (max-width: 820px){
+      .kvs{grid-template-columns:1fr}
+      .title{font-size:24px}
+    }
+    .callout{
+      border-left:4px solid var(--accent);
+      padding:10px 12px;
+      background:#fff7f3;
+      border-radius:12px;
+      margin-top:10px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Eliminación de Datos – SaraPsicologa</h1>
+  <div class="topbar">
+    <div class="wrap brand">
+      <div class="logo" aria-hidden="true"></div>
+      <div>
+        <h1>SaraPsicologa</h1>
+        <small>Solicitud de eliminación de datos</small>
+      </div>
+    </div>
+  </div>
 
-  <p>Los usuarios pueden solicitar la eliminación de sus datos personales en cualquier momento.</p>
+  <main class="wrap">
+    <h2 class="title">Eliminación de Datos</h2>
+    <p class="subtitle">
+      Puedes solicitar la eliminación de tus datos personales asociados al servicio en cualquier momento.
+    </p>
+    <div class="pill"><span class="dot"></span> Tiempo de respuesta máximo: <b>30 días</b></div>
 
-  <h2>Cómo solicitar la eliminación</h2>
-  <p>
-    Enviar un mensaje por WhatsApp o un correo a:<br>
-    <strong>lejozapata@gmail.com</strong>
-  </p>
+    <div class="card">
+      <h2>Cómo solicitar la eliminación</h2>
+      <div class="rule"></div>
 
-  <h2>Tiempo de respuesta</h2>
-  <p>La solicitud será atendida en un plazo máximo de 30 días.</p>
+      <ol>
+        <li>
+          Envía un correo a <a href="mailto:lejozapata@gmail.com">lejozapata@gmail.com</a> con el asunto:
+          <b>“Solicitud de eliminación de datos — SaraPsicologa”</b>.
+        </li>
+        <li>
+          En el mensaje incluye:
+          <ul>
+            <li>Nombre (opcional) y número de teléfono asociado.</li>
+            <li>Qué datos deseas eliminar (si lo sabes) o la solicitud general de eliminación.</li>
+            <li>Una forma de verificación (por ejemplo, escribir desde el mismo correo o número registrado).</li>
+          </ul>
+        </li>
+        <li>
+          Te responderemos confirmando la recepción y el resultado del proceso.
+        </li>
+      </ol>
+
+      <div class="callout">
+        <b>Nota:</b> si existe una obligación legal de conservación (por ejemplo, registros requeridos),
+        se informará qué parte puede mantenerse y por cuánto tiempo.
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Contacto</h2>
+      <div class="rule"></div>
+      <div class="kvs">
+        <div>Correo</div><div><a href="mailto:lejozapata@gmail.com">lejozapata@gmail.com</a></div>
+        <div>Canal alterno</div><div>WhatsApp (si aplica) o correo electrónico</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      © <span id="y"></span> SaraPsicologa — Documento informativo.
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
